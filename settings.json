@@ -1,7 +1,0 @@
-{
-  "git.enableSmartCommit": true,
-  "git.confirmSync": false,
-  "git.autofetch": true,
-  "gitlens.hovers.currentLine.over": "line",
-  "gitlens.currentLine.enabled": true
-}
