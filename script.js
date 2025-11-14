@@ -6,6 +6,23 @@ function getVariables() {
   let height = Number(document.loandata.height.value);
   const G = 9.8;
 
+  // --- ИНВАРИАНТЫ ---
+  console.assert(
+    typeof mass === 'number' && mass > 0,
+    `Инвариант нарушен: mass (${mass}) должна быть положительным числом`
+  );
+
+  console.assert(
+    typeof height === 'number' && height > 0,
+    `Инвариант нарушен: height (${height}) должна быть положительным числом`
+  );
+
+  console.assert(
+    G === 9.8,
+    `Инвариант нарушен: G (${G}) должно быть равно 9.8`
+  );
+  // -------------------
+
   let space_out = document.getElementById("space");
   if (mass >= 0 && height >= 0) {
     let potentialEnergy = mass * G * height;
