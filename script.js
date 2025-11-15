@@ -2,8 +2,8 @@
 //  Масса и высота должны быть положительными числами
 //  Гравитационная постоянная G = 9.8
 function getVariables() {
-  let mass = Number(document.loandata.mass.value);
-  let height = Number(document.loandata.height.value);
+  let mass = Number(document.loandata.mass.value);// Запоминаем значение массы
+  let height = Number(document.loandata.height.value); // Запоминаем значение высоты
   const G = 9.8;
 
   // --- ИНВАРИАНТЫ ---
@@ -24,6 +24,9 @@ function getVariables() {
   // -------------------
 
   let space_out = document.getElementById("space");
+  if((isNaN(mass))||(isNaN(height))){
+    document.getElementById("space").textContent = 'Некорректный тип данных'
+  }
   if (mass >= 0 && height >= 0) {
     let potentialEnergy = mass * G * height;
     console.log(potentialEnergy);
